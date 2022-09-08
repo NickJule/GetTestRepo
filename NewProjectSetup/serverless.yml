@@ -1,0 +1,14 @@
+service: NewProjectSetup
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  hello:
+    handler: handler.testFunction
+    events:
+      - httpApi:
+          path: /
+          method: get
